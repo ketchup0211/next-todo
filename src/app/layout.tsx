@@ -17,20 +17,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <section>
-      <head>
-        If you can dream it,
-        <br />
-        You can do it
-        <br />- my todo -
-      </head>
-      <nav>
-        <Link href="/about">ABOUT</Link>
-        <Link href="/todos-csr">TODOS-CSR</Link>
-        <Link href="/todos-ssr">TODOS-SSR</Link>
-        <Link href="/report">REPORT</Link>
-      </nav>
-      <QueryProvider>{children}</QueryProvider>
-    </section>
+    <html lang="en">
+      <body>
+        <div>
+          If you can dream it,
+          <br />
+          You can do it
+          <br />- my todo -
+        </div>
+        <nav>
+          <Link href="/about">ABOUT</Link>
+          <Link href="/todos-csr">TODOS-CSR</Link>
+          <Link href="/todos-ssr">TODOS-SSR</Link>
+          <Link href="/report">REPORT</Link>
+        </nav>
+        <QueryProvider>{children}</QueryProvider>
+      </body>
+    </html>
   );
 }
